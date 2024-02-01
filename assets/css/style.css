@@ -1,0 +1,44 @@
+
+.main-content {
+    padding: 50px;  
+    text-align: center;  
+}
+
+.local-history {
+    padding: 50px;  
+    text-align: center;
+}
+
+.local {
+    border: #FFAA2B;
+    border-style: solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+h1 {
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+h5 {
+    padding-bottom: 15px;
+}
+
+h6 {
+    font-size: smaller;
+}
+
+.input-group {
+    width: 50%;
+    margin: auto;
+}
+
+.logo {
+    background-color: #FFAA2B;
+	display: grid;
+	align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
