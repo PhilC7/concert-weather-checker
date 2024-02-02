@@ -15,31 +15,34 @@
   <body>
     <section>
       <header>
-        <div class="logo">LOGO Goes here</div>
+        <img
+          class="logo"
+          src="./assets/images/headerAsset 6@100x.png"
+          alt=""
+          srcset=""
+        />
       </header>
 
       <div class="main-content">
-        <h1>Will it be a wash out?</h1>
+        <img
+          src="./assets/images/headerAsset 4@100x.png"
+          alt="weather tracker logo"
+          srcset=""
+          id="logo"
+        />
         <h5>
           Type in the post code of your local concert to see the up coming gigs
           and weather for them!
         </h5>
         <h6>Enter the post code of your local below:</h6>
-        <div class="input-group">
-          <input
-            type="search"
-            class="form-control rounded"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="search-addon"
-          />
-          <button
-            type="button"
-            class="btn btn-outline-primary"
-            data-mdb-ripple-init
-          >
-            search
-          </button>
+        <form id="my-form">
+          <input type="text" id="input_name" size="10" maxlength="24" />
+          <input type="submit" id="submit" value="submit" />
+        </form>
+        <div id="weather-content">
+          <div id="weatherEl"></div>
+          <div id="tempEl"></div>
+          <div id="skysEl"></div>
         </div>
       </div>
 
