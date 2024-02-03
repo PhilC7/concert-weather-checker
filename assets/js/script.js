@@ -1,21 +1,94 @@
 $(document).ready(function () {
-    $("#my-form").submit(function (event) {
+
+    /********************
+     APIS
+    ********************/
+    var weatherKey = "7a91cf58326cd6da40050bda09317cd6";
+    var eventAPI = 'a1xNaECtJW1ZqG3CbA6rC75l1QJMc15f'
+
+
+    /********************
+     GLOBAL VARIABLES
+    ********************/
+    var currentEvent = "";
+    var artistName = 'stacked' //change to take input value.
+    var history = [];
+
+    //get current day and format it
+    var date = dayjs().format("DD/MM/YYYY");
+
+
+
+    /********************
+    Display Event Function
+    ********************/
+    function displayEvent(e) {
+
+        // set value of artists name for the search
+        artistName = $("#input_name").val() || artistName;
+
+        // fetch data from ticket master api then weather api
+        var eventURL = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=GB&keyword=${artistName}&apikey=${eventAPI}`;
+        fetch(eventURL)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (eventData) {
+                console.log(eventURL);
+                console.log(artistName);
+                //get event location
+                var eventCity = eventData._embedded.events[0]._embedded.venues[0].city.name;
+                console.log(eventCity);
+
+                // get event venue
+                var eventVenue = eventData._embedded.events[0]._embedded.venues[0].name;
+                console.log(eventVenue);
+
+                // get event time
+                var eventTime = eventData._embedded.events[0].dates.start.localTime;
+                var formatTime = dayjs(eventTime).format("hh A"); //format event time
+                console.log(eventTime);
+
+                // get event date
+                var eventDate = eventData._embedded.events[0].dates.start.localDate;
+                var formatDay = dayjs(eventDate).format("DD/MM/YYYY"); // format the event date
+                console.log(formatDay);
+
+                // get image of artist
+                var artistImg = eventData._embedded.events[0].images[4].url;
+                console.log(artistImg);
+
+
+                // fetch data for today's forecast using location from event location
+                var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${eventCity}&appid=${weatherKey}`;
+                fetch(weatherURL)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        console.log(weatherURL);
+
+                        // get weather code
+                        var weatherCode = data.list[0].weather[0].icon;
+                        console.log(weatherCode);
+
+                        // get weather icon from code
+                        var weatherIcon = `https://openweathermap.org/img/wn/${weatherCode}@2x.png`;
+                        console.log(weatherIcon);
+                    });
+            });
+    }
+
+    console.log(displayEvent());
+
+
+
+
+
+    $("#submit").on("click", function (event) {
         event.preventDefault();
         var currentCity = $("#input_name").val();
-        console.log("Input Value:", currentCity);
-
-
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=991cf6bd9810f1ee84be3949f37be642`)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                $('#weatherEl').append('<h1>').text(data.name).attr('id', 'cityName');
-
-                $('#tempEl').append('<h5>').text(Math.round(data.main.temp - 274.15) + ' °C').attr('id', 'info');
-
-                $('#skysEl').append('<h5>').text(data.weather[0].main).attr('id', 'info');
-            });
+        console.log(currentCity);
     });
 
 
@@ -24,51 +97,7 @@ $(document).ready(function () {
 
 
 
-
+    // bottom of document.ready function.
 });
 
-
-/********************
- APIS
-********************/
-var weatherKey = "7a91cf58326cd6da40050bda09317cd6";
-var eventAPI = 'a1xNaECtJW1ZqG3CbA6rC75l1QJMc15f'
-
-
-/********************
- GLOBAL VARIABLES
-********************/
-var currentCity = "";
-var artistName = 'stacked' //change to take input value.
-var history = [];
-
-
-var eventURL = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=GB&keyword=${artistName}&apikey=${eventAPI}`;
-fetch(eventURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (eventData) {
-
-        //get location by city name
-        var eventLocation = eventData._embedded.events[0]._embedded.venues[0].city.name;
-        var eventDate = eventData._embedded.events[0].dates.start.localDate;
-        console.log(eventLocation);
-        console.log(eventData);
-
-
-        // fetch data for today's forecast using location from event location
-        var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${eventLocation}&appid=${weatherKey}`;
-        fetch(weatherURL)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                console.log(data);
-                console.log(weatherURL);
-
-                var forecast = data.list[0].weather[0].main; //path to find weather (list index depends on event date)
-                console.log(forecast);
-            });
-    });
 
