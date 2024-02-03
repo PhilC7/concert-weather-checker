@@ -26,7 +26,7 @@
             <a href="#" class="nav-link">Festivals</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="nav-link">About Me</a>
+            <a href="#" class="nav-link">VIP tickets</a>
           </li>
           <li class="navbar-item">
             <a href="#" class="nav-link">Contact</a>
@@ -37,7 +37,7 @@
 
     <div class="main-content">
       <div class="container">
-      <img src="./assets/images/headerAsset 4@100x.png" alt="weather tracker logo" srcset="" id="logo">
+        <img src="./assets/images/headerAsset 4@100x.png" alt="weather tracker logo" srcset="" id="logo">
       </div>
       <h5>Type in the post code of your local concert to see the up coming gigs and weather for them!</h5>
       <h6>Enter the post code of your local below:</h6>
@@ -50,14 +50,16 @@
         <div id="tempEl"></div>
         <div id="skysEl"></div>
       </div>
+      <button id="clearHistoryBtn">Clear History</button>
+      <div id="history-section">
+        <h6>Search History:</h6>
+        <div id="history"></div>
+      </div>
     </div>
 
-    <div class="local-history">
-      <h6>Your recent searches:</h6>
-      <div class="local" id="local1">M21 8BX</div>
-      <div class="local" id="local2">M21 8BX</div>
-    </div>
+
   </section>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
