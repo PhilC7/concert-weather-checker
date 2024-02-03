@@ -16,9 +16,21 @@
     margin: 5px;
 }
 
-h1 {
+#logo {
     padding-bottom: 20px;
+    height: 200px;
+}
+
+#cityName {
+    margin-top: 50px;
+    background-color: lightgray;
+    font-size: larger;
     font-weight: bold;
+}
+
+#info {
+    font-size:large;
+    font-weight:600; 
 }
 
 h5 {
@@ -34,11 +46,14 @@ h6 {
     margin: auto;
 }
 
+header {
+    background-color: #F79739;
+}
+
 .logo {
-    background-color: #FFAA2B;
+    height: 50px;
 	display: grid;
 	align-items: center;
     padding: 10px;
-    font-weight: bold;
-    color: white;
+    padding-left: 50px;
 }
