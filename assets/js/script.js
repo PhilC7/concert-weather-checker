@@ -10,7 +10,6 @@ $(document).ready(function () {
     /********************
      GLOBAL VARIABLES
     ********************/
-    var currentEvent = "";
     var artistName = 'stacked' //change to take input value.
     var history = [];
 
@@ -85,14 +84,27 @@ $(document).ready(function () {
 
 
 
+    // $("#submit").on("click", function (event) {
+    //     event.preventDefault();
+    //     var currentCity = $("#input_name").val();
+    //     console.log(currentCity);
+    // });
+
+
+
+    // click event to add information entered in the search input field to localStorage.
     $("#submit").on("click", function (event) {
         event.preventDefault();
-        var currentCity = $("#input_name").val();
-        console.log(currentCity);
+        var artist = $("#input_name").val().trim(); //set value based on user input
+        history.push(artist) //push that name to the history array
+        var stringifiedHistory = JSON.stringify(history); //stringify array for localStorage
+        $("#input_name").val(""); //reset input value to blank.
+        localStorage.setItem("artists", stringifiedHistory); //set localStorage key:value pairing.
+
+        // call function here to create buttons for each name in history array.
+
+        console.log(stringifiedHistory);
     });
-
-
-
 
 
 
