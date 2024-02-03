@@ -54,6 +54,13 @@ header {
     height: 50px;
 	display: grid;
 	align-items: center;
-    padding: 10px;
-    padding-left: 50px;
+
+}
+.navbar {
+    background-color:  #F79739;
+    padding:0px;
+}
+.container {
+    padding: 50px;
+
 }
