@@ -4,9 +4,37 @@
     text-align: center;  
 }
 
+#headerBG {
+    width: 100%;
+}
+
+#logo {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    height: 12vw;
+}
+
+ul {
+    font-size: 2vw;
+    position: absolute;
+    top: 8px;
+    right: 50px;
+}
+ 
+li {
+    font-family: "Paytone One", sans-serif;
+    color: white;
+    list-style: none;
+}
+
 .local-history {
-    padding: 50px;  
+    padding: 0px 50px 0px 50px;  
     text-align: center;
+}
+
+section {
+    padding: 0px 50px 0px 50px;
 }
 
 .local {
@@ -14,11 +42,6 @@
     border-style: solid;
     padding: 5px;
     margin: 5px;
-}
-
-#logo {
-    padding-bottom: 20px;
-    height: 200px;
 }
 
 #cityName {
@@ -46,14 +69,60 @@ h6 {
     margin: auto;
 }
 
-header {
-    background-color: #F79739;
-}
-
 .logo {
     height: 50px;
 	display: grid;
 	align-items: center;
     padding: 10px;
     padding-left: 50px;
+}
+
+.card {
+        margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px;
+}
+
+.card-title {
+    font-family: "Paytone One", sans-serif;
+    font-size: 37px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#cardWeather {
+    font-family: "Paytone One", sans-serif;
+    font-size: 21px;
+    font-weight: 100;
+    color: #F79739;
+
+}
+
+#cardWeatherInfo {
+    margin-bottom: 5px;
+}
+
+.img-fluid{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+}
+
+#search {
+    font-family: "Paytone One", sans-serif;
+    padding-left: 50px;
+    padding-top: 25px;
+    color: #F79739;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.btn {
+    background-color: #F79739;
+    border-color: #F79739;
+    font-size: 10px;
+    position: relative;
 }
