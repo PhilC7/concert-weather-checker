@@ -1,19 +1,36 @@
 
 .main-content {
-    padding: 50px;  
     text-align: center;  
 }
 
 #headerBG {
     width: 100%;
+    position: absolute;
+}
+
+.hero {
+    background-image: url(/is-it-dry/assets/images/heroAsset\ 9@100x.png);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    padding-top: 25%;
 }
 
 #logo {
     position: absolute;
-    top: 8px;
+    top: 30px;
     left: 50px;
     height: 12vw;
 }
+
+@media only screen and (max-width: 800px) {
+    #logo {
+        position: absolute;
+        top: 8px;
+        left: 50px;
+        height: 12vw;
+    }
+  }
 
 ul {
     font-size: 2vw;
@@ -58,6 +75,10 @@ section {
 
 h5 {
     padding-bottom: 15px;
+    font-family: "Paytone One", sans-serif;
+    font-size: 4vw;
+    margin: 10px;
+
 }
 
 h6 {
@@ -78,9 +99,9 @@ h6 {
 }
 
 .card {
-        margin: 0 auto; 
-        float: none; 
-        margin-bottom: 10px;
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px;
 }
 
 .card-title {
@@ -113,6 +134,7 @@ h6 {
     font-family: "Paytone One", sans-serif;
     padding-left: 50px;
     padding-top: 25px;
+    font-size: 20px;
     color: #F79739;
 }
 
@@ -125,4 +147,9 @@ h6 {
     border-color: #F79739;
     font-size: 10px;
     position: relative;
+}
+
+.hide {
+    padding-top: 25px;
+    display: ;
 }
