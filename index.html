@@ -10,51 +10,111 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Paytone+One&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <section>
-      <header>
-        <img
-          class="logo"
-          src="./assets/images/headerAsset 6@100x.png"
-          alt=""
-          srcset=""
-        />
-      </header>
 
+
+  <!--Header Section-->
+    <header>
+      <img id="headerBG" src="/is-it-dry/assets/images/headerBGAsset 2@100x.png" alt="" srcset="">
+      <img id="logo" src="/is-it-dry/assets/images/LogoWhiteAsset 8@100x.png" alt="">
+      <ul>
+        <li id="about">ABOUT</h1>
+        <li id="about">CREATORS</h1>
+      </ul>
+    </header>
+  <!-- End of Header Section-->
+
+
+  <!--Section with Logo, Intro and Search Bar-->
+    <section id="mainSection">
       <div class="main-content">
-        <img
-          src="./assets/images/headerAsset 4@100x.png"
-          alt="weather tracker logo"
-          srcset=""
-          id="logo"
-        />
-        <h5>
-          Type in the post code of your local concert to see the up coming gigs
-          and weather for them!
-        </h5>
-        <h6>Enter the post code of your local below:</h6>
-        <form id="my-form">
-          <input type="text" id="input_name" size="10" maxlength="24" />
-          <input type="submit" id="submit" value="submit" />
-        </form>
-        <div id="weather-content">
+
+          <h5>Type in the city of your concert to see the up coming gigs and weather for them!</h5>
+          <h6>Enter the post code of your local below:</h6>
+          <form id="my-form">
+            <input type="text" id="input_name" size="10" maxlength="24" />
+            <input type="submit" id="submit" value="submit" />
+         </form>
+      </div>
+    </section>
+  <!--End of Section with Logo, Intro and Search Bar-->
+
+<!--Old place holder for weather and band information-->
+         <!-- <div id="weather-content">
           <div id="weatherEl"></div>
           <div id="tempEl"></div>
           <div id="skysEl"></div>
+        </div> -->
+
+
+<!-- New hard coded section for weather and band/show information -->
+    <section> 
+      <div class="card mb-6" style="max-width: auto;">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="./assets/images/monkeys.jpeg" class="img-fluid rounded-start" alt="Image of arctic monkeys">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title" id="bandName">Arctic Monkeys</h5>
+              <p class="card-text" id="location">Playing in Huddersfield, UK</p>
+              <p class="card-text" id="cardWeather">And the weather looks...</p>
+              <p class="card-text" id="cardWeatherInfo"><b>Overall, a sunny outlook. It's warm with little chance of rain. Enjoy the show!</b></p>
+              <p class="card-text" id="cardWeatherInfo">Temp:</p>
+              <p class="card-text" id="cardWeatherInfo">Chance of Rainfall:</p>
+              <p class="card-text" id="cardWeatherInfo">Cloud cover:</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
+<!-- End of New hard coded section for weather and band/show information -->
 
-      <div class="local-history">
-        <h6>Your recent searches:</h6>
-        <div class="local" id="local1">M21 8BX</div>
-        <div class="local" id="local2">M21 8BX</div>
+<!-- Hard coded cards for locally stored bands/shows from previous searches -->
+    <h1 id="search">Recent Searches:</h1>
+    <section class="local-history">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body" id="historyCardTitle">
+              <h5 class="card-title">Bloc Party</h5>
+              <p class="card-text">In Manchester, UK</p>
+              <a href="#" class="btn btn-primary">Reload details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Foals</h5>
+              <p class="card-text">In Los Angeles, US</p>
+              <a href="#" class="btn btn-primary">Reload details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Alt-J</h5>
+              <p class="card-text">In London, UK</p>
+              <a href="#" class="btn btn-primary">Reload details</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+<!-- End of Hard coded cards for locally stored bands/shows from previous searches -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
   </body>
 </html>
