@@ -23,6 +23,31 @@ $(document).ready(function () {
         history.push(item);
         // Update localStorage
         localStorage.setItem('history', JSON.stringify(history));
+    }
+
+    // Function to display history
+    function displayHistory() {
+        var history = JSON.parse(localStorage.getItem('history')) || [];
+        var historyDiv = $("#history");
+        historyDiv.empty(); // Clear previous history
+        history.forEach(function (item) {
+            var p = $("<p>").text(item);
+            historyDiv.append(p);
+        });
+    }
+
+    // Function to clear history
+    function clearHistory() {
+        localStorage.removeItem('history');
+        displayHistory(); // Clear display as well
+    }
+
+    // Event listener for clear history button
+    $("#clearHistoryBtn").on("click", clearHistory);
+
+    // Display initial history on page load
+    displayHistory();
+
 
 
     /********************
@@ -122,7 +147,17 @@ $(document).ready(function () {
 
     // console.log(displayEvent());
 
-
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+        // Call displayEvent function to fetch and display event details
+        displayEvent();
+        // Get and add searched city to history
+        var cityName = $("#input_name").val().trim();
+        if (cityName !== '') {
+            addToHistory(cityName);
+            displayHistory();
+        }
+    });
 
 
 
