@@ -122,7 +122,7 @@ $(document).ready(function () {
                         <div class="card mb-6" style="max-width: auto;">
                             <div class="row g-0">
                                 <div class="col-md-6">
-                                    <img class="img-fluid" src="${artistImg}" alt="artist-image">
+                                    <img class="img-fluid rounded w-100" src="${artistImg}" alt="artist-image">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card-body">
