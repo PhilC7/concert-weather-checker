@@ -21,11 +21,11 @@
   <!--Header Section-->
   <nav>
     <div class="navbar-container">
-      <img id="headerBG" src="./assets/images/headerBGAsset 2@100x.png" alt="" srcset="">
-      <img id="logo" src="./assets/images/LogoWhiteAsset 8@100x.png" alt="">
+      <img id="headerBG" src="./assets/images/headerBGAsset 2@100x.png" alt="header-background">
+      <img id="logo" src="./assets/images/LogoWhiteAsset 8@100x.png" alt="logo">
       <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#creators">CREATORS</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#creators">Creators</a></li>
       </ul>
     </div>
   </nav>
@@ -36,12 +36,11 @@
   <section id="mainSection">
     <div class="main-content">
 
-      <h5>Type in the city of your concert to see the up coming gigs and weather for them!</h5>
-      <h6>Enter the post code of your local below:</h6>
-      <form id="my-form">
-        <input type="text" id="input_name" size="10" maxlength="24" />
-        <input type="submit" id="submit" value="submit" />
-        <h6>Search History:</h6>
+      <h3 class="mb-3">Find out the weather for your next concert!</h5>
+      <h5 class="mb-3">Enter the artist's name below:</h6>
+      <form class="mb-4 d-flex flex-column w-50 gap-2 m-auto align-items-center" id="my-form">
+        <input class="input rounded w-100" type="text" id="input_name" size="10" maxlength="24" />
+        <input class="btn submit-btn w-100"type="submit" id="submit" value="submit" />
       </form>
       <button id="clearHistoryBtn">Clear History</button>
             <div id="history-section">
@@ -129,6 +128,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>

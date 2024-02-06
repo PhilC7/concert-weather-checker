@@ -33,6 +33,19 @@ li {
   list-style: none;
 }
 
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
 .local-history {
   padding: 0px 50px 0px 50px;
   text-align: center;
@@ -113,6 +126,11 @@ h6 {
   width: auto;
 }
 
+#input_name {
+  padding: 9px 20px;
+  border-color: #f79739;
+}
+
 #search {
   font-family: "Paytone One", sans-serif;
   padding-left: 50px;
@@ -130,6 +148,13 @@ h6 {
   font-size: 10px;
   position: relative;
 }
+
+.submit-btn {
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
 #clearHistoryBtn {
   font-size: 10px;
   margin-right: 20px;
