@@ -23,7 +23,7 @@
 ul {
   font-size: 2vw;
   position: absolute;
-  top: 8px;
+  top: 20px;
   right: 50px;
 }
 
@@ -60,6 +60,11 @@ section {
   border-style: solid;
   padding: 5px;
   margin: 5px;
+}
+
+.main-content h3 {
+  font-family: "Paytone One", sans-serif;
+  color: #ffaa2b;
 }
 
 #cityName {
@@ -99,6 +104,7 @@ h6 {
   margin: 0 auto;
   float: none;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .card-title {
@@ -121,9 +127,9 @@ h6 {
 
 .img-fluid {
   background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
   width: auto;
+  object-fit: cover;
 }
 
 #input_name {
