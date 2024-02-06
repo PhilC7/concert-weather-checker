@@ -145,7 +145,6 @@ $(document).ready(function () {
 
     }
 
-    // console.log(displayEvent());
 
     $("#submit").on("click", function (event) {
         event.preventDefault();
@@ -158,12 +157,6 @@ $(document).ready(function () {
             displayHistory();
         }
     });
-
-
-
-    $("#submit").on("click", displayEvent);
-
-
 
 
     // click event to add information entered in the search input field to localStorage.

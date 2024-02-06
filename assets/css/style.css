@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-content {
   padding: 50px;
   text-align: center;
@@ -127,4 +133,36 @@ h6 {
 #clearHistoryBtn {
   font-size: 10px;
   margin-right: 20px;
+}
+
+footer {
+  background-color: #f79739;
+  padding: 36px 0;
+}
+
+footer img {
+  height: 60px;
+}
+
+footer h6 {
+  color: white;
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+  color: #f79739;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+footer a:visited {
+  color: #f79739;
+}
+
+footer a:hover {
+  color: white;
+  background-color: #f79739;
+  border: 1px solid white;
 }
