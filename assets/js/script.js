@@ -16,6 +16,14 @@ $(document).ready(function () {
     //get current day and format it
     var date = dayjs().format("DD/MM/YYYY");
 
+    function addToHistory(item) {
+        // Get existing history or initialize an empty array
+        var history = JSON.parse(localStorage.getItem('history')) || [];
+        // Add new item to history
+        history.push(item);
+        // Update localStorage
+        localStorage.setItem('history', JSON.stringify(history));
+
 
     /********************
     Display Event Function
