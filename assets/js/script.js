@@ -119,24 +119,24 @@ $(document).ready(function () {
                         // console.log(weatherIcon);
 
                         $("#show-event").append(`
-                        <div class="card mb-6" style="max-width: auto;">
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img class="img-fluid rounded w-100" src="${artistImg}" alt="artist-image">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <h5 class="card-title pb-3" id="bandName">${artistName}</h5>
-                                        <p class="card-text" id="location">Playing in ${eventCity} at the ${eventVenue}.</p>
-                                        <p class="card-text" id="location">Concert Date: ${formatDay}.</p>
-                                        <p class="card-text" id="cardWeather">And the weather looks...</p>
-                                        <img src="${weatherIcon}">
-                                        <p class="card-text" id="cardWeatherInfo"><b>Overall, it will be ${weatherTemp}˚C, ${weatherDescription}. Enjoy the show!</p>
-                                        
-                                    </div>
-                                </div>
-
+                        <div class="card mb-6 col-lg-12">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <img class="img-fluid rounded-md-start rounded-sm-top w-100" src="${artistImg}" alt="artist-image">
                             </div>
+                            <div class="col-md-6">
+                                <div class="card-body d-flex flex-column text-center">
+                                    <h5 class="card-title pb-3" id="bandName">${artistName}</h5>
+                                    <p class="card-text" id="location">Playing in ${eventCity} at the ${eventVenue}.</p>
+                                    <p class="card-text" id="location">Concert Date: ${formatDay}.</p>
+                                    <p class="card-text" id="cardWeather">And the weather looks...</p>
+                                    <img class="weather-icon mx-auto" src="${weatherIcon}">
+                                    <p class="card-text" id="cardWeatherInfo"><b>Overall, it will be ${weatherTemp}˚C, ${weatherDescription}. Enjoy the show!</p>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
                         </div>`)
 
                     });
