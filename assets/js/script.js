@@ -16,40 +16,6 @@ $(document).ready(function () {
     //get current day and format it
     var date = dayjs().format("DD/MM/YYYY");
 
-    function addToHistory(item) {
-        // Get existing history or initialize an empty array
-        var history = JSON.parse(localStorage.getItem('history')) || [];
-        // Add new item to history
-        history.push(item);
-        // Update localStorage
-        localStorage.setItem('history', JSON.stringify(history));
-    }
-
-    // Function to display history
-    function displayHistory() {
-        var history = JSON.parse(localStorage.getItem('history')) || [];
-        var historyDiv = $("#history");
-        historyDiv.empty(); // Clear previous history
-        history.forEach(function (item) {
-            var p = $("<p>").text(item);
-            historyDiv.append(p);
-        });
-    }
-
-    // Function to clear history
-    function clearHistory() {
-        localStorage.removeItem('history');
-        displayHistory(); // Clear display as well
-    }
-
-    // Event listener for clear history button
-    $("#clearHistoryBtn").on("click", clearHistory);
-
-    // Display initial history on page load
-    displayHistory();
-
-
-
     /********************
     Display Event Function
     ********************/
@@ -146,16 +112,49 @@ $(document).ready(function () {
     }
 
 
+    /********************
+  Display History Function
+  ********************/
+    function displayHistory() {
+        $("#show-history").empty() //clear history to avoid duplicate cards
+        var history = localStorage.getItem("artists");
+        if (history == null || history == "") {
+            return;
+        }
+
+        var historyBtn = JSON.parse(history);
+
+        // create card for each item of the array
+        for (let i = 0; i < historyBtn.length; i++) {
+            $("#show-history").append(`
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="card w-100 history-card">
+                    <div class="card-body d-flex flex-column" id="historyCardTitle">
+                    <h5 class="card-title mb-3">${historyBtn[i]}</h5>
+                        <button id="reload" class="btn btn-primary mt-auto">Reload Event</button>
+                </div>
+            </div>
+        </div>`)
+            console.log(historyBtn);
+        }
+    }
+    /********************
+    Clear History Function
+    ********************/
+    function clearHistory() {
+        localStorage.clear();
+        $("#show-history").empty(); // clear history cards
+        $("#show-event").empty(); // clear event card
+
+    }
+
+    // Event listener for clear history button
+    $("#clearHistoryBtn").on("click", clearHistory);
+
+
     $("#submit").on("click", function (event) {
         event.preventDefault();
-        // Call displayEvent function to fetch and display event details
         displayEvent();
-        // Get and add searched city to history
-        var cityName = $("#input_name").val().trim();
-        if (cityName !== '') {
-            addToHistory(cityName);
-            displayHistory();
-        }
     });
 
 
@@ -168,11 +167,18 @@ $(document).ready(function () {
         $("#input_name").val(""); //reset input value to blank.
         localStorage.setItem("artists", stringifiedHistory); //set localStorage key:value pairing.
 
-        // call function here to create buttons for each name in history array.
-
+        displayHistory();
 
     });
 
+    $("#show-history").on("click", "#reload", function (e) {
+        e.stopPropagation();
+        artistName = $(this).siblings(".card-title").text();
+        // console.log($(this).text());
+        displayEvent();
+    })
+
+    displayHistory();
 
 
 

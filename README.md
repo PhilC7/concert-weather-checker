@@ -25,9 +25,19 @@ To use the Concert Weather Checker:
 
 ### Initial page view.
 
-### Page view after retrieving concert and weather data.
+![start-screen](./assets/images/01-initial-screen.png)
 
-### View of the 'Recent Searches' area.
+### View of current and recent searches.
+
+![searched-screen](./assets/images/02-search-history.png)
+
+### Tablet View.
+
+![tablet-view](./assets/images/03-tablet-view.png)
+
+### Mobile View.
+
+![mobile-view](./assets/images/04-mobile-view.png)
 
 # Credits
 
