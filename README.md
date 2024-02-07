@@ -1,6 +1,7 @@
 # Concert Weather Checker
 
 This is a weather checker app that allows the user to check the weather for an upcoming concert they are attending. The data received will firstly gather the date and place for the artist's concert. In turn we can use the date and place to retrieve weather data to then give a forecast.
+The search will be stored and displayed in a 'Recent Searches' section.
 
 ## Description
 
