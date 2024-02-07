@@ -41,7 +41,6 @@
         <input class="input rounded col-8" type="text" id="input_name" size="10" maxlength="24" placeholder="Enter the artist's name." />
         <input class="btn submit-btn col-md-4 col-8"type="submit" id="submit" value="Find Concert" />
       </form>
-      <button id="clearHistoryBtn">Clear History</button>
             <div id="history-section">
                 <div id="history"></div>
     </div>
@@ -83,9 +82,10 @@
 
   <!-- Hard coded cards for locally stored bands/shows from previous searches -->
   <h1 id="search">Recent Searches:</h1>
-  <section class="local-history">
+
+  <section class="local-history mt-4">
     <div class="row">
-      <div class="col-sm-4">
+      <!-- <div class="col-sm-4">
         <div class="card">
           <div class="card-body" id="historyCardTitle">
             <h5 class="card-title">Bloc Party</h5>
@@ -111,8 +111,10 @@
             <a href="#" class="btn btn-primary">Reload details</a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
+  <button class="btn btn-danger w-100 mt-4" id="clearHistoryBtn">Clear History</button>
+
   </section>
   <!-- End of Hard coded cards for locally stored bands/shows from previous searches -->
 </div>

@@ -113,6 +113,8 @@ h6 {
   float: none;
   margin-bottom: 10px;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: none;
 }
 
 .card-title {
@@ -177,8 +179,17 @@ h6 {
 }
 
 #clearHistoryBtn {
-  font-size: 10px;
-  margin-right: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  border: none;
+}
+
+#clearHistoryBtn:hover {
+  background-color: white;
+  color: #dc3545;
+  outline: 2px solid #dc3545;
+  outline-offset: -2px;
 }
 
 footer {
