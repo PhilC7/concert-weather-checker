@@ -9,13 +9,20 @@
   text-align: center;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
 #headerBG {
   width: 100%;
 }
 
 #logo {
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 50px;
   height: 12vw;
 }
@@ -44,6 +51,7 @@ nav li a {
 
 nav li a:hover {
   text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 .local-history {
@@ -161,6 +169,13 @@ h6 {
   font-size: 1rem;
 }
 
+.submit-btn:hover {
+  color: #f79739;
+  background-color: white;
+  outline: 2px solid #f79739;
+  outline-offset: -2px;
+}
+
 #clearHistoryBtn {
   font-size: 10px;
   margin-right: 20px;
@@ -195,5 +210,17 @@ footer a:visited {
 footer a:hover {
   color: white;
   background-color: #f79739;
-  border: 1px solid white;
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+
+/* Creators Page Styling */
+
+.fa-brands {
+  font-size: 2rem;
+  color: #f79739;
+}
+
+.fa-square-github:hover {
+  color: #d17e2b;
 }

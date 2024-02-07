@@ -17,7 +17,6 @@
 
 <body>
 
-
   <!--Header Section-->
   <nav>
     <div class="navbar-container">
@@ -30,17 +29,17 @@
     </div>
   </nav>
   <!-- End of Header Section-->
-
-
+  
+  
+  <div class="container">
   <!--Section with Logo, Intro and Search Bar-->
   <section id="mainSection">
     <div class="main-content">
 
-      <h3 class="mb-3">Find out the weather for your next concert!</h5>
-      <h5 class="mb-3">Enter the artist's name below:</h6>
-      <form class="mb-4 d-flex flex-column w-50 gap-2 m-auto align-items-center" id="my-form">
-        <input class="input rounded w-100" type="text" id="input_name" size="10" maxlength="24" />
-        <input class="btn submit-btn w-100"type="submit" id="submit" value="submit" />
+      <h3 class="mb-3">Find out the weather for your next concert!</h3>
+      <form class="mb-4 d-flex flex-column flex-sm-column flex-md-row col-md-10 col-lg-8 gap-2 m-auto align-items-center" id="my-form">
+        <input class="input rounded col-8" type="text" id="input_name" size="10" maxlength="24" placeholder="Enter the artist's name." />
+        <input class="btn submit-btn col-md-4 col-8"type="submit" id="submit" value="Find Concert" />
       </form>
       <button id="clearHistoryBtn">Clear History</button>
             <div id="history-section">
@@ -116,7 +115,7 @@
     </div>
   </section>
   <!-- End of Hard coded cards for locally stored bands/shows from previous searches -->
-
+</div>
   <!-- FOOTER -->
   <footer class="mt-5 bottom">
     <div class="container d-flex flex-column flex-md-row justify-content-around align-items-center h-100">
@@ -125,6 +124,7 @@
       <a href="https://github.com/PhilC7/is-it-dry">GitHub Repo</a>
     </div>
   </footer>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="./assets/js/script.js"></script>
