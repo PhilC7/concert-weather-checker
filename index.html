@@ -1,136 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Concert Weather Checker</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Paytone+One&family=Poppins:wght@400;500;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concert Weather Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Paytone+One&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
 
-  <!--Header Section-->
-  <nav>
-    <div class="navbar-container">
-      <img id="headerBG" src="./assets/images/headerBGAsset 2@100x.png" alt="header-background">
-      <img id="logo" src="./assets/images/LogoWhiteAsset 8@100x.png" alt="logo">
-      <ul>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./creators.html">CREATORS</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- End of Header Section-->
-  
-  
-  <div class="container">
-  <!--Section with Logo, Intro and Search Bar-->
-  <section id="mainSection">
-    <div class="main-content">
-
-      <h3 class="mb-3">Find out the weather for your next concert!</h3>
-      <form class="mb-4 d-flex flex-column flex-sm-column flex-md-row col-md-10 col-lg-8 gap-2 m-auto align-items-center" id="my-form">
-        <input class="input rounded col-8" type="text" id="input_name" size="10" maxlength="24" placeholder="Enter the artist's name." />
-        <input class="btn submit-btn col-md-4 col-8"type="submit" id="submit" value="Find Concert" />
-      </form>
-            <div id="history-section">
-                <div id="history"></div>
-    </div>
-  </section>
-  <!--End of Section with Logo, Intro and Search Bar-->
-
-  <!--Old place holder for weather and band information-->
-  <!-- <div id="weather-content">
-          <div id="weatherEl"></div>
-          <div id="tempEl"></div>
-          <div id="skysEl"></div>
-        </div> -->
-
-
-  <!-- New hard coded section for weather and band/show information -->
-  <section id="show-event">
-    <!-- <div class="card mb-6" style="max-width: auto;">
-        <div class="row g-0">
-          <div class="col-md-6">
-            <img src="./assets/images/monkeys.jpeg" class="img-fluid rounded-start" alt="Image of arctic monkeys">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title" id="bandName">Arctic Monkeys</h5>
-              <p class="card-text" id="location">Playing in Huddersfield, UK</p>
-              <p class="card-text" id="cardWeather">And the weather looks...</p>
-              <p class="card-text" id="cardWeatherInfo"><b>Overall, a sunny outlook. It's warm with little chance of rain. Enjoy the show!</b></p>
-              <p class="card-text" id="cardWeatherInfo">Temp:</p>
-              <p class="card-text" id="cardWeatherInfo">Chance of Rainfall:</p>
-              <p class="card-text" id="cardWeatherInfo">Cloud cover:</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-
-        </div>
-      </div> -->
-  </section>
-  <!-- End of New hard coded section for weather and band/show information -->
-
-  <!-- Hard coded cards for locally stored bands/shows from previous searches -->
-  <h1 id="search">Recent Searches:</h1>
-
-  <section class="local-history mt-4">
-    <div id="show-history" class="row">
-      <!-- <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body" id="historyCardTitle">
-            <h5 class="card-title">Bloc Party</h5>
-            <p class="card-text">In Manchester, UK</p>
-            <a href="#" class="btn btn-primary">Reload details</a>
-          </div>
-        </div>
+    <!--Header Section-->
+    <nav>
+      <div class="navbar-container">
+        <img id="headerBG" src="./assets/images/headerBGAsset 2@100x.png" alt="header-background">
+        <img id="logo" src="./assets/images/LogoWhiteAsset 8@100x.png" alt="logo">
+        <ul>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./creators.html">CREATORS</a></li>
+        </ul>
       </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Foals</h5>
-            <p class="card-text">In Los Angeles, US</p>
-            <a href="#" class="btn btn-primary">Reload details</a>
-          </div>
-        </div>
+    </nav>
+    <!-- End of Header Section-->
+    
+    
+    <div class="container">
+    <!--Section with Logo, Intro and Search Bar-->
+    <section id="mainSection">
+      <div class="main-content">
+
+        <h3 class="mb-3">Find out the weather for your next concert!</h3>
+        <form class="mb-4 d-flex flex-column flex-sm-column flex-md-row col-md-10 col-lg-8 gap-2 m-auto align-items-center" id="my-form">
+          <input class="input rounded col-8" type="text" id="input_name" size="10" maxlength="24" placeholder="Enter the artist's name." />
+          <input class="btn submit-btn col-md-4 col-8"type="submit" id="submit" value="Find Concert" />
+        </form>
+              <div id="history-section">
+                  <div id="history"></div>
       </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Alt-J</h5>
-            <p class="card-text">In London, UK</p>
-            <a href="#" class="btn btn-primary">Reload details</a>
-          </div>
-        </div>
-      </div> -->
-    </div>
-  <button class="btn btn-danger w-100 mt-4" id="clearHistoryBtn">Clear History</button>
+    </section>
+    <!--End of Section with Logo, Intro and Search Bar-->
 
-  </section>
-  <!-- End of Hard coded cards for locally stored bands/shows from previous searches -->
-</div>
-  <!-- FOOTER -->
-  <footer class="mt-5 bottom">
-    <div class="container d-flex flex-column flex-md-row justify-content-around align-items-center h-100">
-      <img src="./assets/images/LogoWhiteAsset 8@100x.png" alt="">
-      <h6 class="py-4">Copyright © 2024 | All Rights Reserved</h6>
-      <a href="https://github.com/PhilC7/is-it-dry" target="_blank">GitHub Repo</a>
-    </div>
-  </footer>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-  <script src="./assets/js/script.js"></script>
 
-</body>
+    <!-- New hard coded section for weather and band/show information -->
+    <section id="show-event">
+
+    </section>
+    <!-- End of New hard coded section for weather and band/show information -->
+
+    <!-- Hard coded cards for locally stored bands/shows from previous searches -->
+    <h1 id="search">Recent Searches:</h1>
+
+    <section class="local-history mt-4">
+      <div id="show-history" class="row">
+    
+      </div>
+    <button class="btn btn-danger w-100 mt-4" id="clearHistoryBtn">Clear History</button>
+
+    </section>
+    <!-- End of Hard coded cards for locally stored bands/shows from previous searches -->
+  </div>
+    <!-- FOOTER -->
+    <footer class="mt-5 bottom">
+      <div class="container d-flex flex-column flex-md-row justify-content-around align-items-center h-100">
+        <img src="./assets/images/LogoWhiteAsset 8@100x.png" alt="">
+        <h6 class="py-4">Copyright © 2024 | All Rights Reserved</h6>
+        <a href="https://github.com/PhilC7/is-it-dry" target="_blank">GitHub Repo</a>
+      </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+  </body>
 
 </html>
