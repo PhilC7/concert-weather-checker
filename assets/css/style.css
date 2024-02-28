@@ -3,12 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.main-content {
-  padding: 50px;
-  text-align: center;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -16,6 +10,13 @@ body {
   justify-content: space-between;
 }
 
+
+.main-content {
+  padding: 50px;
+  text-align: center;
+}
+
+/* HEADER STYLING */
 #headerBG {
   width: 100%;
 }
@@ -54,17 +55,15 @@ nav li a:hover {
   text-underline-offset: 10px;
 }
 
-.local-history {
-  text-align: center;
+.logo {
+  height: 50px;
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  padding-left: 50px;
 }
 
-.local {
-  border: #ffaa2b;
-  border-style: solid;
-  padding: 5px;
-  margin: 5px;
-}
-
+/* MAIN CONTENT STYLING */
 .main-content h3 {
   font-family: "Paytone One", sans-serif;
   color: #ffaa2b;
@@ -93,14 +92,6 @@ h6 {
 .input-group {
   width: 50%;
   margin: auto;
-}
-
-.logo {
-  height: 50px;
-  display: grid;
-  align-items: center;
-  padding: 10px;
-  padding-left: 50px;
 }
 
 .card {
@@ -179,6 +170,21 @@ h6 {
   outline-offset: -2px;
 }
 
+/* HISTORY SECTION STYLING */
+.local-history {
+  text-align: center;
+}
+
+.local {
+  border: #ffaa2b;
+  border-style: solid;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+
+/* CLEAR HISTORY BUTTON STYLING */
 #clearHistoryBtn {
   font-size: 1rem;
   padding: 10px 20px;
@@ -193,6 +199,7 @@ h6 {
   outline-offset: -2px;
 }
 
+/* FOOTER STYLING */
 footer {
   background-color: #f79739;
   padding: 36px 0;
